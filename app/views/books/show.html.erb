@@ -1,11 +1,9 @@
 <h1>Book detail</h1>
  <table>
-   <% @book.each do |book| %>
    <tr>
-     <td><%= book.title %></td>
-     <td><%= book.body %></td>
+     <td><%= @book.title %></td>
+     <td><%= @book.body %></td>
    </tr>
-   <% end %>
  </table>
 
  <h1>New book</h1>
