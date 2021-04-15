@@ -1,2 +1,9 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h1>User info</h1>
+<%= form_with model:@user, local:true do |f| %>
+  <h3>Name</h3>
+  <%= f.text_field, :name %>
+  <h3>Image</h3>
+  <%= f.attachment_field, :profile_image_id %>
+  <h3>Introduction</h3>
+  <%= f.text_area, :introduction %>
+<% end %>
