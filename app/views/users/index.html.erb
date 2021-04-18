@@ -8,6 +8,9 @@
   <% @users.each do |user| %>
   <tr>
     <td>
+      <%= attachment_image_tag @user, :profile_image, :fill, 30, 30, format:'jpeg', fallback:'no_image.jpg' %>
+    </td>
+    <td>
      <%= user.name %>
     </td>
     <td>
