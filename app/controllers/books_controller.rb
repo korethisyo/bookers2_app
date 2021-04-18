@@ -4,9 +4,8 @@ class BooksController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
-    @book = current_user.book.new(book_params)
-    @book.user_id = user.id
+    @book = current_user.books.new(book_params)
+    @book.user_id = current_user.id
     @book.save
     redirect_to books_path
   end
