@@ -13,12 +13,6 @@
    </tr>
    <% end %>
  </table>
- 
-<h1>User info</h1>
-<%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format:'jpeg', fallback:'no_image.jpg' %>
-<p>name <%= @user.name %></p>
-<p>introduction <%= @user.introduction %></p>
-<%= link_to "edit", edit_user_path([:id]) %>
 
 <h1>New book</h1>
 <%= form_with model:@book, local:true do |f| %>
