@@ -1,6 +1,6 @@
 <% if @book.errors.any? %>
-  <%= @book.errors.count %> errors prohibited this obj from being saved:
-  <%= @book.errors.full_messages.each do |message| %>
+  <%= @book.errors.count %> errors prohibited this obj from being saved:<br>
+  <% @book.errors.full_messages.each do |message| %>
     <%= message %>
   <% end %>
 <% end %>
@@ -15,7 +15,7 @@
    <% @books.each do |book| %>
    <tr>
      <td>
-      <%= link_to (attachment_image_tag book.user, :profile_image, :fill, 30, 30, format:'jpeg', fallback:'no_image.jpg'), user_path(@user.id) %>
+      <%= link_to (attachment_image_tag book.user, :profile_image, :fill, 30, 30, format:'jpeg', fallback:'no_image.jpg'), user_path(book.user) %>
      </td>
      <td>
       <%= link_to book.title, book_path(book.id) %>
