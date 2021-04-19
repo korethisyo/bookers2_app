@@ -13,6 +13,7 @@ class BooksController < ApplicationController
       @user = current_user
       render :index
     end
+    flash[:notice] = "You have created book successfully."
   end
 
   def index
@@ -37,6 +38,7 @@ class BooksController < ApplicationController
     else
       render :edit
     end
+    flash[:notice] = "You have updated book successfully."
   end
 
   def destroy
