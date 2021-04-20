@@ -1,0 +1,9 @@
+<h1>User info</h1>
+<%= attachment_image_tag user, :profile_image, :fill, 100, 100, format:'jpeg', fallback:'no_image.jpg' %>
+<div class="table">
+  <p>name <%= user.name %></p>
+  <p>introduction <%= user.introduction %></p>
+</div>
+<%= link_to edit_user_path(user.id), method: :get, class:"btn btn-secondary" do %>
+  <i class="fas fa-user-cog"></i>
+<% end %>
